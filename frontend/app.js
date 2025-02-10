@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    navigate("home"); // Charger la page d'accueil au début
+    navigate("home");
   });
   
   function navigate(page) {
@@ -25,10 +25,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   console.log('Nom d\'utilisateur:', username);
   console.log('Mot de passe:', password);
 
-  // Ici, tu pourrais ajouter un appel à une API pour vérifier les identifiants
-
   // Si les identifiants sont corrects, fermer la modale
-  // Bootstrap fermera automatiquement la modale si tu utilises le bouton de fermeture, mais tu peux aussi le faire manuellement avec :
+  // Bootstrap fermera automatiquement la modale si tu utilises le bouton de fermeture
   const modal = new bootstrap.Modal(document.getElementById('loginModal'));
   modal.hide(); // Ferme la modale manuellement si nécessaire
 
@@ -36,6 +34,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   alert('Connexion réussie !');
 });
 
+// ID entrante pour le Back ?
 fetch('/login', {
   method: 'POST',
   headers: {
